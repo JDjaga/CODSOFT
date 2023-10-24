@@ -3,23 +3,55 @@ HTML:
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated {
+            animation: fadeIn 1s ease-in-out;
+           
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+        }
+
+        nav li {
+            list-style: none;
+            margin: 0 10px;
+        }
+    </style>
     <title>My Portfolio</title>
 </head>
-<body>
-    <header>
+        <body class="animated">
+            <header class="animated">
+            <img class="profile-pic" src="c:\Users\dfaiz\Downloads\JD.jpg" alt="Profile Picture">
         <h1>S.D.JAGADIISH</h1>
         <p>Web Developer</p>
     </header>
-    
-    <nav>
+    <nav class="animated">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Resume</a></li>
         </ul>
     </nav>
     
-    <section id="about">
+    <section id="about" class="animated">
         <h2>Hey there! I'm S.D. Jagadiish, your friendly neighborhood web wizard.
             With a passion for crafting immersive digital experiences, I'm on a mission to revolutionize the online world, one pixel at a time.</h2>
         <p>My journey in web development has been a thrilling adventure, marked by countless lines of code and even more best moments. 
@@ -28,30 +60,37 @@ HTML:
            What truly sets me apart is my commitment to user-centric design. I believe a website should not just be a virtual space, but an immersive journey for every visitor. Accessibility, responsiveness, and user-friendliness are my non-negotiables.</p>
     </section>
     
-    <section id="PROJECTS:">
+    <section id="projects" class="animated">
         <h2>Projects</h2>
         <div class="TO DO LIST">
-            <img src="c:\Users\dfaiz\OneDrive\Pictures\Screenshots\todolist.png" alt="Project 1">
             <h3>PROJECT TITLE 1:</h3>
             <p>To create an To do list using Html, CSS and Javascript.</p>
+            <img src="c:\Users\dfaiz\OneDrive\Pictures\Screenshots\todolist.png" alt="Project 1">
             <h3>DESCRIPTION OF THE PROJECT 1:</h3>
             <p>The Dynamic To-Do List project is a web application that allows users to create, manage, and organize their tasks in a user-friendly interface. Built using HTML for structure, CSS for styling, and JavaScript for interactivity, this project showcases the power of front-end development in creating practical, real-world applications.</p>
         </div>
         <div class="REAL TIME CALCULATOR">
-            <img src="c:\Users\dfaiz\OneDrive\Pictures\Screenshots\realtimecalculator.png" alt="Project 2">
             <h3>PROJECT TITLE 2:</h3>
             <p>To make an best realtime calculator using Html, CSS and Javascript.</p>
+            <img src="c:\Users\dfaiz\OneDrive\Pictures\Screenshots\realtimecalculator.png" alt="Project 2">
             <h3>DESCRIPTION OF THE PROJECT 2:</h3>
             <p>The Realtime Calculator is a dynamic web application that empowers users to perform complex mathematical operations in real-time, right in their browser. Crafted with a blend of HTML, CSS, and JavaScript, this project showcases the seamless integration of front-end design and back-end logic.</p>
         </div>
     </section>
+    <section id="resume" class="animated">
+        <h2>Resume</h2>
+        <p>Download my resume <a href="c:\Users\dfaiz\Downloads\Jaga's Resume.pdf" target="_blank">here</a>.</p>
+    </section>
 
-    <section id="contact">
+    <section id="contact" class="animated">
         <h2>Contact Me</h2>
         <p>Contact.no: +91 9887675455</p>
         <p>Email: jagadiishsd@gmail.com</p>
         <p>LinkedIn: <a href="https://in.linkedin.com/in/jaga-diish-427273257">LinkedIn Profile</a></p>
     </section>
+    <footer class="animated">
+        <p>© 2023 S.D.Jagadiish</p>
+    </footer>
 </body>
 </html>
 
@@ -60,42 +99,48 @@ CSS:
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 header {
     text-align: center;
-    background-color: #1c1b1b;
-    color: #fdf4f4;
-    padding: 20px;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    background-color: #0e0e0e;
-    padding: 10px;
-}
-
-nav li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fefafa;
-    font-weight: bold;
 }
 
 section {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #070707;
+    margin-bottom: 20px;
 }
 
-.project {
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #050505;
+h2 {
+    border-bottom: 2px solid #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 2px;
+}
+
+.project img {
+    max-width: 80%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.project img {
+    max-width: 80%;
+    height: auto;
+}
+
+.profile-pic {
+    max-width: 50px; 
+    height: auto;
+    border-radius: 50%; 
 }
